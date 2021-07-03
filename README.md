@@ -4,27 +4,27 @@
 
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
-| email              | string | null: not   |
-| password           | string | null: not   |
-| name               | string | null: not   |
-| profile            | text   | null: not   |
-| occupation         | text   | null: not   |
-| position           | text   | null: not   |
+| email              | string | null: false |
+| password           | string | null: false |
+| name               | string | null: false |
+| profile            | text   | null: false |
+| occupation         | text   | null: false |
+| position           | text   | null: false |
 
 ## prototypes テーブル
 
-| Column      | Type       | Options     |
-| ------      | ------     | ----------- |
-| title       | string     | null: not   |
-| catch_copy  | text       | null: not   |
-| concept     | text       | null: not   |
-| user        | references | null: false |
+| Column      | Type       | Options                       |
+| ------      | ------     | -----------                   |
+| title       | string     | null: false                   |
+| catch_copy  | text       | null: false                   |
+| concept     | text       | null: false                   |
+| user        | references | null: false foreign_key: true |
 
 ## comments テーブル
 
-| Column      | Type       | Options     |
-| ------      | ------     | ----------- |
-| text        | text       | null: not   |
-| user        | references | null: false |
-| prototype   | references | null: false |
+| Column      | Type       | Options                       |
+| ------      | ------     | -----------                   |
+| text        | text       | null: false                   |
+| user        | references | null: false foreign_key: true |
+| prototype   | references | null: false foreign_key: true |
 
